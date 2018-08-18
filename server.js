@@ -30,15 +30,17 @@ hbs.registerHelper('screamIt',(text)=>{return text.toUpperCase();});  //res.send
   //   name:'pido',
   //   like: ['games', 'gym']
   // });
-  res.render('home.hbs',{PageTitle : 'Home page',
+  res.render('home.hbs',{PageTitle : 'Home page TITLE',
  welcomeMessage: 'Pssst i love uuu!!!!'});
 });
 
 app.listen(port,()=>{ console.log(`server is up on  port ${port}`)});
-
+app.get('/projects',(req,res)=>{
+  res.render('projects.hbs',{PageTitle:'I lovies uu'})
+} );
 app.get('/about',(req,res)=>{
 
-  res.render('about.hbs',{PageTitle : 'About page'
+  res.render('about.hbs',{PageTitle : 'About how much  i love u page page'
 });
 
 });
